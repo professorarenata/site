@@ -1,8 +1,33 @@
 <html>
+<head>
 
-<body bgcolor="red" text="white">
+</head>
+<body bgcolor="blue" text="Yellow">
+   Professora Renata Ávila
 
-  <h5><center>Modificado - Richard</center></h5>
-  
+   
+   <!-- contribuição Costeau -->
+   <div style="width:320px;margin:auto;padding:10px;">
+   <input style="width:100%;height:40px;border-radius:5px;" id="numero" value="" placeholder="Digite um número"></input>
+   <button style="width:100%;height:40px;background:none;border-radius:5px;border:none;border:1px solid #f66;margin-top:20px;" onclick="sortear()">Testar sorte</button><br>
+   <font style="color:#f66;">*Breno Costeau</font>
+   </div>
+   <script>
+   function sortear() {
+     var num = document.getElementById("numero").value;
+	 var valida = num.length;
+	 if (valida > 1 || valida == "") {
+	   alert("Eu falei para digitar UM NÚMERO...");
+	 } else {
+	   var res = Math.floor(Math.random() * 10);
+	   if(num == res) {
+	     alert("Seu número foi sorteado: "+res);
+		 } else {
+		 alert("Seu número: "+ num +", não foi sorteado. Número sorteado: "+res);
+		 }
+	 }
+	 }
+	 document.getElementsByTagName("body")[0].style.background = "#ddd";
+   </script>
 </body>
 </html>
